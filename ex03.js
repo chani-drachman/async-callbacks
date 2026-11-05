@@ -14,3 +14,17 @@
 // Run: node ex03.js
 
 // write your code here
+let timer=6;
+
+function timerFun(){
+    if(timer==0){
+        console.log("Time's up!")
+        return
+    }
+    timer--;
+    setTimeout(() => {
+      console.log(timer.toString())
+      timerFun()  
+    }, 1000);
+}
+timerFun()
