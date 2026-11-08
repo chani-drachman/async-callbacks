@@ -18,3 +18,20 @@
 // Run: node ex14.js
 
 // write your code here
+let countdown=3;
+let delay=500 + Math.random() * 1000;
+
+function randomDelayCountdown(){
+   setTimeout(() => {
+    if(countdown===-1){
+        console.log("Done!")
+        return
+    }
+  delay = 500 + Math.random() * 1000;
+   console.log(countdown.toString())
+   countdown--
+   randomDelayCountdown()
+}, delay); 
+}
+
+randomDelayCountdown()
